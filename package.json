@@ -11,13 +11,19 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"postcss": "^8.4.24",
+		"postcss-load-config": "^4.0.1",
+		"sass": "^1.63.6",
 		"svelte": "^4.0.0",
+		"svelte-preprocess": "^5.0.4",
 		"vite": "^4.3.6"
 	},
 	"type": "module",
 	"dependencies": {
-		"papaparse": "^5.4.1"
+		"papaparse": "^5.4.1",
+		"sanitize.css": "^13.0.0"
 	}
 }

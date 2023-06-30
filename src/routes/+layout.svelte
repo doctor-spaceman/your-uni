@@ -1,5 +1,6 @@
 <script>
   import Header from '$lib/components/Header.svelte'
+  import 'sanitize.css'
 </script>
 
 <main class="website-wrapper">
@@ -7,7 +8,7 @@
   <slot></slot>
 </main>
 
-<style>
+<style lang="scss">  
   .website-wrapper {
     font-family: Arial, Helvetica, sans-serif;
   }

@@ -11,7 +11,7 @@
   </ul>
 </section>
 
-<style>
+<style lang="scss">
   .card-grid {
     display: grid;
     grid-gap: 24px;

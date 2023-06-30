@@ -8,7 +8,7 @@
   <p class="card__url">{cardData.url}</p>
 </li>
 
-<style>
+<style lang="scss">
   .card {
     border-radius: 4px;
     background: #FFF;
@@ -16,17 +16,18 @@
     list-style: none;
     margin-bottom: 24px;
     padding: 12px 16px;
-  }
-  .card__location {
+
+    &__location {
     color: rgba(0, 0, 0, 0.60);
     font-size: 14px;
     line-height: 150%;
-  }
-  .card__title {
-    font-size: 22px;
-    line-height: 135%;
-  }
-  .card__url {
-    color: #E16259;
+    }
+    &__title {
+      font-size: 22px;
+      line-height: 135%;
+    }
+    &__url {
+      color: #E16259;
+    }
   }
 </style>
