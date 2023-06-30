@@ -3,7 +3,7 @@
 </script>
 
 <li class="card">
-  <p class="card__location">{cardData.city} · {cardData.state}</p>
+  <p class="card__location">{cardData.city} · {cardData.st}</p>
   <h3 class="card__title">{cardData.name}</h3>
   <p class="card__url">{cardData.url}</p>
 </li>
@@ -18,16 +18,24 @@
     padding: 12px 16px;
 
     &__location {
-    color: rgba(0, 0, 0, 0.60);
-    font-size: 14px;
-    line-height: 150%;
+      color: rgba(0, 0, 0, 0.60);
+      font-size: 14px;
+      line-height: 150%;
+      padding: 0;
+      margin: 0 0 4px 0;
     }
+
     &__title {
       font-size: 22px;
       line-height: 135%;
+      padding: 0;
+      margin: 0 0 8px 0;
     }
+
     &__url {
       color: #E16259;
+      padding: 0;
+      margin: 0;
     }
   }
 </style>

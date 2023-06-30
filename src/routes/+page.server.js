@@ -16,7 +16,7 @@ export async function load({ fetch }) {
         id: entry.UNITID,
         name: entry.INSTNM,
         city: entry.CITY,
-        state: entry.STABBR,
+        st: entry.STABBR,
         url: entry.INSTURL
       }))
     }
