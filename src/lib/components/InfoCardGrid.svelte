@@ -1,12 +1,21 @@
 <script>
   import InfoCard from '$lib/components/InfoCard.svelte'
-
-  // Get the data
-  fetch('https://gist.githubusercontent.com/simonlast/d5a86ba0c82e1b0d9f6e3d2581b95755/raw/f608b9b896dd3339df13dae317998d5f24c00a50/edu-scorecard.csv')
-  .then((response) => response.text())
-  .then((data) => console.log(data));
+  export let unitData
 </script>
 
-<div class="card-grid">
-  <p>Cards go here</p>
-</div>
+<section>
+  <ul class="card-grid">
+    {#each unitData.units as unit (unit.id)}
+    <InfoCard cardData={unit}/>
+    {/each}
+  </ul>
+</section>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fill,minmax(282px, 1fr));
+    padding: 0;
+  }
+</style>

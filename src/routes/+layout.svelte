@@ -9,7 +9,13 @@
 
 <style>
   .website-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .website-wrapper {
+      margin: 0 auto;
+      max-width: calc(1440px - 240px);
+    }
   }
 </style>
