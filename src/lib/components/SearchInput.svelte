@@ -10,7 +10,6 @@
   const focusFirstResult = () => {
     if (results) {
       const firstCardLinkEl = document.querySelector('.card-grid .card a')
-      console.log(firstCardLinkEl)
       firstCardLinkEl.focus();
     }
   }
