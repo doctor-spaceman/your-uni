@@ -5,7 +5,7 @@
 <li class="card">
   <p class="card__location">{cardData.city} · {cardData.st}</p>
   <h3 class="card__title">{cardData.name}</h3>
-  <p class="card__url"><a href={cardData.url}>{cardData.url}</a></p>
+  <p class="card__url"><a href={`https://${cardData.url}`}>{cardData.url}</a></p>
 </li>
 
 <style lang="scss">
