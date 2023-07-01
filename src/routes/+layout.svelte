@@ -12,11 +12,15 @@
   .website-wrapper {
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 40px;
+    margin: 0 auto;
+    max-width: calc(360px - 20px);
     
+    @media only screen and (min-width: 540px) {
+      max-width: calc(540px - 20px);
+    }
+
     @media only screen and (min-width: 768px) {
-      margin: 0 auto;
-      max-width: calc(768px - 120px);
+      max-width: calc(768px - 60px);
     }
 
     @media only screen and (min-width: 1024px) {

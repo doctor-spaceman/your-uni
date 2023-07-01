@@ -2,6 +2,7 @@
   import InfoCard from '$lib/components/InfoCard.svelte'
   export let unitData
   export let searchData
+  export let resultCount
 
   $: searchString = searchData && searchData.length ? searchData.toLowerCase() : null
 
@@ -9,6 +10,8 @@
       const searchy = `${unit.name}, ${unit.city}`
       return searchy.toLowerCase().includes(searchString)
     })
+
+  $: resultCount = filteredCards.length
 </script>
 
 <section>

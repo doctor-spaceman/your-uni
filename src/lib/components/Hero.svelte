@@ -15,29 +15,67 @@
 
 <style lang="scss">
   .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
+    position: relative;
+
+    @media only screen and (min-width: 540px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    @media only screen and (min-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      margin-bottom: 100px;
+    }
   }
 
   .hero-content,
   .hero-image {
-    width: calc(50% - 24px);
+    width: 100%;
+
+    @media only screen and (min-width: 540px) {
+      width: calc(50% - 24px);
+    }
+
+    @media only screen and (min-width: 1024px) {
+      width: calc(50% - 24px);
+    }
   }
 
   .hero-content {
     &__heading {
-      font-size: 69px;
+      font-size: 32px;
       font-weight: 700;
       letter-spacing: -1.85px;
       line-height: 100%;
       margin: 0 0 24px 0;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 42px;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        font-size: 69px;
+      }
     }
 
     &__copy {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 145%;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        font-size: 20px;
+      }
     }
   }
 
@@ -45,10 +83,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 384px;
+    position: absolute;
+    top: -40px;
+    right: -130px;
+    z-index: -50;
+
+    @media only screen and (min-width: 540px) {
+      position: unset;
+      top: unset;
+      right: unset;
+      z-index: unset;
+    }
 
     img {
+      height: auto;
+      width: 100%;
+      padding: 20px;
 
+      @media only screen and (min-width: 540px) {
+        padding: 0;
+        width: 240px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        width: 300px;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        width: 384px;
+      }
     }
   }
 </style>

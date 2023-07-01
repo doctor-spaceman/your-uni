@@ -16,7 +16,19 @@
     list-style: none;
     margin-bottom: 24px;
     padding: 12px 16px;
-    width: 282px;
+    width: 100%;
+
+    @media only screen and (min-width: 540px) {
+      width: calc(50% - 24px);
+    }
+
+    @media only screen and (min-width: 768px) {
+      width: 342px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      width: 282px;
+    }
 
     &__location {
       color: rgba(0, 0, 0, 0.60);
