@@ -1,5 +1,10 @@
 <script>
-  const currentPath = window.location.pathname
+  import { onMount } from 'svelte';
+  
+  let currentPath = ''
+  onMount(() => {
+		currentPath = window.location.pathname
+	});
 </script>
 
 <header class="header">
