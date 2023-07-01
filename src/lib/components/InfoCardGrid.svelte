@@ -27,9 +27,10 @@
 
 <style lang="scss">
   .card-grid {
-    display: grid;
-    grid-gap: 24px;
-    grid-template-columns: repeat(auto-fill,minmax(282px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
     padding: 0;
   }
 </style>

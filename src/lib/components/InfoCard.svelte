@@ -5,7 +5,7 @@
 <li class="card">
   <p class="card__location">{cardData.city} · {cardData.st}</p>
   <h3 class="card__title">{cardData.name}</h3>
-  <p class="card__url">{cardData.url}</p>
+  <p class="card__url"><a href={cardData.url}>{cardData.url}</a></p>
 </li>
 
 <style lang="scss">
@@ -16,6 +16,7 @@
     list-style: none;
     margin-bottom: 24px;
     padding: 12px 16px;
+    width: 282px;
 
     &__location {
       color: rgba(0, 0, 0, 0.60);
@@ -33,9 +34,13 @@
     }
 
     &__url {
-      color: #E16259;
       padding: 0;
       margin: 0;
+
+      a {
+        color: #E16259;
+        text-decoration: none;
+      }
     }
   }
 </style>

@@ -10,6 +10,7 @@
 
 <style lang="scss">  
   .website-wrapper {
+    color: #000;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 40px;
     
