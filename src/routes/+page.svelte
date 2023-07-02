@@ -1,12 +1,12 @@
 <svelte:head>
- <title>YourUni | Find your university</title>
- <meta name="description" content="Find the university that's right for you with YourUni." />
- <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "YourUni"
-  }
+  <title>YourUni | Find your university</title>
+  <meta name="description" content="Find the university that's right for you with YourUni." />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "YourUni"
+    }
   </script>
 </svelte:head>
 
