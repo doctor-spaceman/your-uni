@@ -13,4 +13,5 @@ npm install
 npm run dev
 ```
 5. If you run into an error, try updating node.
-6. Copy the local url from the terminal and past into the address bar of your preferred browser.
+6. Copy the local url from the terminal and paste into the address bar of your preferred browser.
+7. If you run into an issue loading the page in your browser, try clearing all data for localhost and visit the page again.
