@@ -9,6 +9,7 @@ This app consumes a CSV file and displays the data as a searchable visual databa
 3. Open terminal and navigate to your directory
 4. Run: 
 ```bash
+npm install
 npm run dev
 ```
 5. Copy the local url from the terminal and past into the address bar of your preferred browser.
