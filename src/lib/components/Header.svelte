@@ -1,10 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
-
-  let currentPath = ''
-  onMount(() => {
-		currentPath = window.location.pathname
-	});
+  import { page } from '$app/stores'; 
 </script>
 
 <header class="header">
@@ -13,13 +8,13 @@
     <div class="header-logo"><a href="/">YourUni</a></div>
     <nav class="header-navigation">
       <ul>
-        <li class:active={currentPath === '/'}>
+        <li class:active={$page.url.pathname === '/'}>
           <a href="/">Product</a>
         </li>
-        <li class:active={currentPath === '/download'}>
+        <li class:active={$page.url.pathname === '/download'}>
           <a href="/download">Download</a>
         </li>
-        <li class:active={currentPath === '/pricing'}>
+        <li class:active={$page.url.pathname === '/pricing'}>
           <a href="/pricing">Pricing</a>
         </li>
       </ul>
