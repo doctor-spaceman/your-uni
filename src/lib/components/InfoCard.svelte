@@ -1,13 +1,32 @@
 <script>
   export let cardData
+
+  function formatCardDisplayUrl (url) {
+    let cardUrl = url
+
+    if (cardUrl.includes('www.')) {
+      cardUrl = cardUrl.split('www.')[1]
+    }
+
+    const cardUrlLastChar = cardUrl.substr(-1)
+    if ( cardUrlLastChar === '/') {
+      cardUrl = cardUrl.split(cardUrlLastChar)[0]
+    }
+
+    return cardUrl
+  }
+
+  function formatCardHrefUrl (url) {
+    return !url.includes('http') ? `https://${url}` : url
+  }
 </script>
 
 <li class="card">
-  <a href={`https://${cardData.url}`}>
-    <div>
-      <p class="card__location">{cardData.city} · {cardData.st}</p>
-      <h3 class="card__title">{cardData.name}</h3>
-      <p class="card__url">{cardData.url}</p>
+  <a href={formatCardHrefUrl(cardData.url)}>
+    <div itemtype="https://schema.org/CollegeOrUniversity">
+      <p class="card__location">{cardData.city} &#183; {cardData.st}</p>
+      <div class="card__title" itemprop="name">{cardData.name}</div>
+      <p class="card__url" itemprop="url">{formatCardDisplayUrl(cardData.url)}</p>
     </div>
   </a>
 </li>
@@ -51,6 +70,7 @@
     &__title {
       color: #000;
       font-size: 22px;
+      font-weight: 700;
       line-height: 135%;
       padding: 0;
       margin: 0 0 8px 0;
@@ -58,6 +78,8 @@
 
     &__url {
       color: #E16259;
+      font-size: 15px;
+      line-height: 150%;
       padding: 0;
       margin: 0;
     }

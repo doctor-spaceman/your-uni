@@ -20,8 +20,9 @@
 </script>
 
 <div class="grid-search">
+  <label for="search" class="sr-only">Search universities</label>
   <input
-    aria-label="Search universities"
+    id="search"
     class="grid-search__input"
     type="text" 
     placeholder="Search..." 
@@ -31,16 +32,18 @@
   <p 
     role="status" 
     class="grid-search__results"
-    class:active={results}
+    class:active={queryVal}
   >
-    {results} universities found
+    {#if results}
+    <span>{results} universities found</span>
+    {:else}
+    <span>No universities found</span>
+    {/if}
   </p>
 </div>
 
 <style lang="scss">
   .grid-search {
-    font-size: 14px;
-
     @media only screen and (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -49,6 +52,7 @@
     &__input {
       border-radius: 4px;
       border: 2px solid #eee;
+      font-size: 14px;
       height: 44px;
       width: 100%;
       padding: 0 16px;
@@ -60,12 +64,13 @@
 
     &__results {
       color: rgba(0,0,0,.6);
+      font-size: 14px;
       margin: 15px 0;
       opacity: 0;
       padding: 0 16px;
 
       @media only screen and (min-width: 768px) {
-        margin-left: 24px;
+        margin: 0 0 0 24px;
         padding: 0;
       }
 

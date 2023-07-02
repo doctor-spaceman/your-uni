@@ -3,20 +3,35 @@
   import 'sanitize.css'
 </script>
 
-<main class="website-wrapper">
+<div class="website-wrapper">
   <Header />
   <slot></slot>
-</main>
+</div>
 
-<style lang="scss">  
+<style lang="scss">
+  :global(.sr-only) {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
+
   .website-wrapper {
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0 auto;
-    max-width: calc(360px - 20px);
+    padding: 0 20px;
+    min-width: 340px;
     
     @media only screen and (min-width: 540px) {
+      margin: 0 auto;
       max-width: calc(540px - 20px);
+      padding: 0;
     }
 
     @media only screen and (min-width: 768px) {
