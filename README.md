@@ -12,4 +12,5 @@ This app consumes a CSV file and displays the data as a searchable visual databa
 npm install
 npm run dev
 ```
-5. Copy the local url from the terminal and past into the address bar of your preferred browser.
+5. If you run into an error, try updating node.
+6. Copy the local url from the terminal and past into the address bar of your preferred browser.
