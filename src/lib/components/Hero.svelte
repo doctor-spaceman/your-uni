@@ -9,7 +9,7 @@
     <p class="hero-content__copy">Tenetur ex explicabo et illo. Recusandae fugit eius voluptatem. Voluptas atque autem totam.</p>
   </div>
   <div class="hero-image">
-    <img src={hero_img_src} alt={hero_img_alt} />
+    <img width="384" height="383" src={hero_img_src} alt={hero_img_alt} />
   </div>
 </section>
 
