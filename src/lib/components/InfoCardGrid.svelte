@@ -34,6 +34,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 24px;
+    min-height: 383px;
     padding: 0;
   }
 </style>
