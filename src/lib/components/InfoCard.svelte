@@ -22,7 +22,7 @@
 </script>
 
 <li class="card">
-  <a href={formatCardHrefUrl(cardData.url)}>
+  <a target="_blank" href={formatCardHrefUrl(cardData.url)}>
     <div itemtype="https://schema.org/CollegeOrUniversity">
       <p class="card__location">{cardData.city} &#183; {cardData.st}</p>
       <div class="card__title" itemprop="name">{cardData.name}</div>
