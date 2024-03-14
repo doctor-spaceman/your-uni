@@ -1,4 +1,4 @@
-# notion-test
+# your-uni
 
 This app consumes a CSV file and displays the data as a searchable visual database.
 
